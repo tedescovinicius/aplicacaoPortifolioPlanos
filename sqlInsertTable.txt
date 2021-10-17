@@ -1,0 +1,103 @@
+insert into Usuario(Nome,Telefone,Funcao,Senha,Email)values
+	('Vinicius Tedesco', '49988498642', 'Vendedor', '123456', 'Vinicius.tedesco@mhnet.com.br'),
+	('Denio Duarte', '4933240494', 'Vendedor', '654321', 'Denio.Duarte@mhnet.com.br'),
+	('Raquel Aparecida',' 4933217000', 'Administrador', '789456', 'Raquel.Aparecida@mhnet.com.br'),
+	('Jeferson Krumenauer', '49988161262', 'Administrador', '101010', 'Jeferson.Krumenauer@mhnet.com.br'),
+	('Afonso Pena', '4933245904', 'Vendedor', '202020', 'Afonso.Pena@mhnet.com.br');
+ 
+
+insert into Servicos(MatriculaUsuario, DescricaoServico, NomeServico, Valor)values
+	(2, 'Fornecimento de internet fibra optica de 100MB plano mensal', 'Internet 100MB', 100.00),
+	(2, 'Fornecimento de internet fibra optica de 200MB plano mensal', 'Internet 200MB', 200.00),
+	(5, 'Internet 50MB e Tefone fixo', 'Internet 50MB + Telefone Fixo', 70.00),
+	(5, 'Internet 100MB mais MhnetTV', 'Internet 100MB + MhnetTV', 150.00),
+	(5, 'Fornecimento de internet fibra optica de 300MB plano mensal', 'Internet 300MB', 300.00),
+	(2, 'Plano serviço movel 8GB Internet', 'Servico Movel 8GB', 34.50),
+	(2, 'Plano serviço movel 8GB Internet', 'Servico Movel 15GB', 100.00),
+	(2, 'Telefone Fixo, nao pode ser vendido sem internet', 'Telefone Fixo', 20.00),
+	(5, 'Plano TV, nao pode ser vendido sem internet', 'TV', 70.00),
+	(5, 'Fornecimento de internet fibra optica de 250MB plano mensal', 'Internet 25MB', 249.00);
+
+	
+insert into Equipamentos(Preco,Funcionalidade,Modelo,TaxaInstalacao)values
+	(120.00, 'Distribuir sinal wifi', 'TpLink', 50.00 ),
+	(10.00, 'Chip de telefone Nano', 'Chip', 0.00),
+	(100.00, 'Telefone fixo intelbrass', 'Telefone', 10.00),
+	(20.00, 'Patch Cord 10 Metros', 'Patch Cord 10', 5.00),
+	(30.00, 'Patch Cord 20 Metros', 'Patch Cord 20',5.00),
+	(40.00, 'Patch Cord 30 Metros', 'Patch Cord 30', 5.00),
+	(250.00, 'Modem ADSL WI-FI para 100MB', 'Modem',70.00),
+	(100.00, 'Modem ADSL WI-FI para 50', 'Modem', 70.00),
+	(300.00, 'Modem ADSL WI-FI para 300MB', 'Modem', 70.00),
+	(70.00, 'Conversor Digital TV', 'Conversor Digital TV', 40.00);
+
+
+insert into infraestrutura(CodigoServico, idEquipamento)values
+	(1,1),
+	(2,4),
+	(3,3),
+	(4,10),
+	(5,6),
+	(6,2),
+	(7,2),
+	(8,9),
+	(9,10),
+	(10,5);
+
+insert into formapagamento(descricao, nome)values
+	('Parcelamento Cartao de Credito', 'Credito'),
+	('Debito em conta', 'DebitoConta'),
+	('Boleto Bancario', 'Boleto'),
+	('A vista', 'A vista'),
+	('Pix' , 'Pix');
+
+insert into cliente(CPF, Nome, Email, Telefone)values
+	('10443383936', 'Vinicius Luis Tedesco', 'viniciusluistedesco@gmail.comm', '49988498642'),
+	('12345678910', 'Paulina Cavalcante', 'Paulina@gmail.comm', '49989128684'),	
+	('10987654321', 'Ellen Polaquini', 'ellenPolaquini@gmail.comm', '49988161262'),
+	('66661086991', 'Joao Da Silva', 'joaoDaSilva@gmail.comm', '4933240494'),
+	('88899910191', 'Valentina Correa', 'valentia@gmail.comm', '4933217000'),
+	('10443383935', 'Joao Da Silva', 'joaoDaSilva@gmail.comm', '4933240494'),
+	('66661087992', 'Joao Da Luz', 'joaoLuz@gmail.comm', '4933240000'),
+	('10101214156', 'Eduardo Joao Da Silva', 'EduardoDaSilva@gmail.comm', '49988161265'),
+	('55588844686', 'Milena Da Silva', 'Milena@gmail.comm', '49988256589'),
+	('24252627289', 'Carla Ferarri Silva', 'FerarriCarla@gmail.comm', '4933217050');
+
+insert into endereco(rua, bairro, CEP, numero, complemento)values
+	('Osvaldo Cruz', 'São Cristovao', 89804051, 719, 'E'),
+	('Afonso Pena', 'Bela Vista', 89804054, 819, 'D'),
+	('Fernando Machado', 'Passo dos Fortes', 89804050, 400, 'E'),
+	('Avenida Getulio Vargar', 'Centro', 89805051, 482, 'E'),
+	('Tira Dentes', 'Cristo Rei', 89806050, 587, 'D'),
+	('Produnte de Moraes', 'Seminario', 89806051, 588 ,'D'),
+	('Licinio Cordova', 'Engenho Braum', 89806052, 615, 'E'),
+	('Princesa Isabel', 'Efapi', 89806053, 123, 'D'),
+	('Lauro Muller', 'Jardim Italia', 89806054, 450, 'D'),
+	('Uruguai', 'Paraiso', 89806055, 120, 'E');
+	
+insert into local(idEndereco, idCliente,local)values
+	(1, '10443383936', 1),
+	(2, '12345678910', 1),
+	(3, '10987654321', 1),
+	(4, '66661086991', 1),
+	(5, '88899910191', 1),
+	(6, '10443383935', 1),
+	(7, '66661087992', 1),
+	(8, '10101214156', 1),
+	(9, '55588844686', 1),
+	(10, '24252627289', 1);
+
+insert into solicita(Status, dataSolicitacao, dataConclusao, LocalInstalacaoCliente, idFormaPagamento, codigoServicos, idCliente)values
+	('Encerrada', to_date('18/05/2021', 'dd/mm/YYYY'), to_date('20/05/2021', 'dd/mm/YYYY'), 1, 1, 1, '10443383936'),
+	('Encerrada', to_date('14/10/2021', 'dd/mm/YYYY'), to_date('16/10/2021', 'dd/mm/YYYY'), 1, 2, 1, '12345678910'),
+	('Encerrada', to_date('17/09/2021', 'dd/mm/YYYY'), to_date('20/09/2021', 'dd/mm/YYYY'), 1, 3, 1, '10987654321'),
+	('Encerrada', to_date('20/05/2021', 'dd/mm/YYYY'), to_date('21/05/2021', 'dd/mm/YYYY'), 1, 4, 1, '66661086991');
+
+insert into solicita(Status, dataSolicitacao, LocalInstalacaoCliente, idFormaPagamento, codigoServicos, idCliente)values
+	('Andamento', to_date('14/03/2020', 'dd/mm/YYYY'), 1, 2, 4, '88899910191'),
+	('Pendente', to_date('15/10/2021', 'dd/mm/YYYY'), 1, 5, 1, '10443383935'),
+	('Pendente', to_date('14/03/2021', 'dd/mm/YYYY'), 1, 1, 1, '66661087992'),
+	('Pendente', to_date('18/08/2021', 'dd/mm/YYYY'), 1, 2, 1, '10101214156'),
+	('Andamento', to_date('18/07/2021', 'dd/mm/YYYY'), 1, 3, 1, '55588844686'),
+	('Pendente', to_date('14/05/2021', 'dd/mm/YYYY'), 1, 4, 1, '24252627289');
+	
